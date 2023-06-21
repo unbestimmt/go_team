@@ -12,6 +12,14 @@ public class Saltador extends Atleta {
 
     @Override
     public String treinar() {
-        return "Dá saltos";
+        return "Saltando";
     }
+
+    public String toString() {
+        String retorno = super.toString();
+        retorno += "Altura: " + this.altura + " metros\n";
+        return retorno;
+
+    }
+
 }

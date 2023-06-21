@@ -20,7 +20,7 @@ public abstract class Atleta implements Serializable {
         retorno += "Nome: "     + this.nome     + "\n";
         retorno += "Número: "    + this.numero    + "\n";
         retorno += "Idade: "     + this.idade     + " anos\n";
-        retorno += "Barulho: "  + treinar()        + "\n";
+        retorno += "Treino: "  + treinar()        + "\n";
         return retorno;
     }
 

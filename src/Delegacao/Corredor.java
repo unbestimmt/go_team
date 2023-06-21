@@ -12,6 +12,6 @@ public class Corredor extends Atleta {
 
     @Override
     public String treinar() {
-        return "Corre";
+        return "Correndo";
     }
 }

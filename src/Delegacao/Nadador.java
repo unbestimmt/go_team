@@ -12,6 +12,6 @@ public class Nadador extends Atleta {
 
     @Override
     public String treinar() {
-        return "Nadar";
+        return "Nadando";
     }
 }
