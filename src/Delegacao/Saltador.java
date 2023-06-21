@@ -15,6 +15,7 @@ public class Saltador extends Atleta {
         return "Saltando";
     }
 
+    @Override
     public String toString() {
         String retorno = super.toString();
         retorno += "Altura: " + this.altura + " metros\n";

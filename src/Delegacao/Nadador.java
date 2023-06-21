@@ -14,4 +14,13 @@ public class Nadador extends Atleta {
     public String treinar() {
         return "Nadando";
     }
+
+    @Override
+    public String toString() {
+        String retorno = super.toString();
+        retorno += "Estilo: " + this.estilo + "\n";
+        return retorno;
+
+    }
+
 }

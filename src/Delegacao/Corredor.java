@@ -14,4 +14,13 @@ public class Corredor extends Atleta {
     public String treinar() {
         return "Correndo";
     }
+
+    @Override
+    public String toString() {
+        String retorno = super.toString();
+        retorno += "Velocidade: " + this.velocidade + " metros/segundo\n";
+        return retorno;
+
+    }
+
 }
