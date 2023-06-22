@@ -29,7 +29,7 @@ public class Delegacao {
 
         int numero = this.retornaInteiro(valores[1]);
         int idade = this.retornaInteiro(valores[2]);
-        int altura = this.retornaInteiro(valores[3]);
+        double altura = this.retornaDouble(valores[3]);
 
         Saltador saltador = new Saltador (valores[0],numero,idade,altura);
         return saltador;
@@ -43,7 +43,7 @@ public class Delegacao {
 
         int numero = this.retornaInteiro(valores[1]);
         int idade = this.retornaInteiro(valores[2]);
-        double velocidade = this.retornaInteiro(valores[3]);
+        double velocidade = this.retornaDouble(valores[3]);
 
         Corredor corredor = new Corredor (valores[0],numero,idade,velocidade);
         return corredor;
@@ -65,20 +65,40 @@ public class Delegacao {
     //TRANSFORMA STRING EM INTEIRO
     private boolean intValido(String s) {
         try {
-            Integer.parseInt(s); // M�todo est�tico, que tenta tranformar uma string em inteiro
+            Integer.parseInt(s); // Método estático, que tenta tranformar uma string em inteiro
             return true;
-        } catch (NumberFormatException e) { // N�o conseguiu tranformar em inteiro e gera erro
+        } catch (NumberFormatException e) { // Não conseguiu tranformar em inteiro e gera erro
             return false;
         }
     }
     public int retornaInteiro(String entrada) { // retorna um valor inteiro
         int numInt;
 
-        //Enquanto n�o for poss�vel converter o valor de entrada para inteiro, permanece no loop
+        //Enquanto não for possível converter o valor de entrada para inteiro, permanece no loop
         while (!this.intValido(entrada)) {
             entrada = JOptionPane.showInputDialog(null, "Valor incorreto!\n\nDigite um número inteiro.");
         }
         return Integer.parseInt(entrada);
+    }
+
+    //TRANSFORMA STRING EM DOUBLE
+    private boolean doubleValido(String s) {
+        try {
+            Double.parseDouble(s); // Método estático, que tenta transformar uma string em double
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    public double retornaDouble(String entrada) { // retorna um valor double
+        double numDouble;
+
+        //Enquanto não for possível converter o valor de entrada para double, permanece no loop
+        while (!this.doubleValido(entrada)) {
+            entrada = JOptionPane.showInputDialog(null, "Valor incorreto!\n\nDigite um número com casas decimais.");
+        }
+        return Double.parseDouble(entrada);
     }
 
     public void salvaAtletas (ArrayList<Atleta> atletas){
