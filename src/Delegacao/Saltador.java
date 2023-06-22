@@ -10,6 +10,14 @@ public class Saltador extends Atleta {
         this.altura = altura;
     }
 
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
     @Override
     public String treinar() {
         return "Saltando";

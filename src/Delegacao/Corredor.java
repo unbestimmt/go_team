@@ -10,6 +10,14 @@ public class Corredor extends Atleta {
         this.velocidade = velocidade;
     }
 
+    public double getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
+    }
+
     @Override
     public String treinar() {
         return "Correndo";

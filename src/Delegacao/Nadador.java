@@ -10,6 +10,14 @@ public class Nadador extends Atleta {
         this.estilo = estilo;
     }
 
+    public String getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(String estilo) {
+        this.estilo = estilo;
+    }
+
     @Override
     public String treinar() {
         return "Nadando";

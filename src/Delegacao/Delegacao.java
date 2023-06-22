@@ -105,11 +105,11 @@ public class Delegacao {
         ObjectOutputStream outputStream = null;
         try {
             outputStream = new ObjectOutputStream
-                    (new FileOutputStream("c:\\temp\\delegacao.dados"));
+                    (new FileOutputStream("delegacao.dados"));
             for (int i=0; i < atletas.size(); i++)
                 outputStream.writeObject(atletas.get(i));
         } catch (FileNotFoundException ex) {
-            JOptionPane.showMessageDialog(null,"Imposs�vel criar arquivo!");
+            JOptionPane.showMessageDialog(null,"Impossível criar arquivo!");
             ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -133,7 +133,7 @@ public class Delegacao {
 
         try {
             inputStream = new ObjectInputStream
-                    (new FileInputStream("c:\\temp\\delegacao.dados"));
+                    (new FileInputStream("delegacao.dados"));
             Object obj = null;
             while ((obj = inputStream.readObject()) != null) {
                 if (obj instanceof Atleta) {
